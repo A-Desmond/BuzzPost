@@ -36,7 +36,7 @@ class CommentScreen extends StatelessWidget {
                               '${comment.username}  ',
                               style:const TextStyle(
                                   fontSize: 20,
-                                  color: Colors.red,
+                                  color: Colors.cyan,
                                   fontWeight: FontWeight.w700),
                             ),
                             Text(
@@ -53,7 +53,7 @@ class CommentScreen extends StatelessWidget {
                             ///time ago package to be added
                             Text(
                               //timeago.format
-                              tmgo.format(comment.datePublished.toDate),
+                              tmgo.format(comment.datePublished.toDate()),
                               style: const TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
@@ -104,7 +104,7 @@ class CommentScreen extends StatelessWidget {
                 ),
                 trailing: TextButton(
                     onPressed: () {
-                     _commentController.postComment(controller.text);
+                     _commentController.postComment(controller);
                     },
                     child: Text(
                       'Send',

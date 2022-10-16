@@ -1,3 +1,5 @@
+import 'package:buzpost/Views/Screens/profile_screen.dart';
+import 'package:buzpost/Views/Screens/search_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -15,16 +17,12 @@ const borderColor = Colors.white;
 //nav widgets
 final pages = [
   VideoScreen(),
-  const Center(
-    child: Text('Search'),
-  ),
+   SearchScreen(),
   const UploadVideo(),
   const Center(
     child: Text('Messages'),
   ),
-  const Center(
-    child: Text('Profile'),
-  ),
+Profile(uid: firebaseAuth.currentUser!.uid),
 ];
 
 ///FIREBASE

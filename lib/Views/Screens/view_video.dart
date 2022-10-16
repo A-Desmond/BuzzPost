@@ -120,7 +120,7 @@ class VideoScreen extends StatelessWidget {
                                     Icon(Icons.music_note),
                                     Text(
                                       data.productName,
-                                      style: TextStyle(
+                                      style:const  TextStyle(
                                         fontSize: 15,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,

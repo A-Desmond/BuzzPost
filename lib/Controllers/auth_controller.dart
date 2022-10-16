@@ -116,9 +116,7 @@ class AuthController extends GetxController {
     }
   }
 
-  void logout(context) {
+  void signOut() {
     firebaseAuth.signOut();
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Register()));
   }
 }

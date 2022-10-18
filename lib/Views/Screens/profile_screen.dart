@@ -162,7 +162,7 @@ class _ProfileState extends State<Profile> {
                             },
                             child: Text(
                               widget.uid ==authController.user.uid? 'SignOut': controller.user['isFollowing']?'UnFollow':'Follow',
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style:const  TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
                         ),

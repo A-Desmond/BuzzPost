@@ -117,7 +117,7 @@ class VideoScreen extends StatelessWidget {
                                 ),
                                 Row(
                                   children: [
-                                    Icon(Icons.music_note),
+                                   const  Icon(Icons.music_note),
                                     Text(
                                       data.productName,
                                       style:const  TextStyle(

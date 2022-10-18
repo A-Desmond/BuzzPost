@@ -22,7 +22,7 @@ final pages = [
   const Center(
     child: Text('Messages'),
   ),
-Profile(uid: firebaseAuth.currentUser!.uid),
+Profile(uid: authController.user.uid),
 ];
 
 ///FIREBASE

@@ -106,9 +106,9 @@ class CommentScreen extends StatelessWidget {
                     onPressed: () {
                      _commentController.postComment(controller);
                     },
-                    child: Text(
+                    child:const  Text(
                       'Send',
-                      style: const TextStyle(fontSize: 15, color: Colors.white),
+                      style: TextStyle(fontSize: 15, color: Colors.white),
                     )),
               )
             ],

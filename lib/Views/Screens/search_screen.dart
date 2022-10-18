@@ -34,7 +34,7 @@ class SearchScreen extends StatelessWidget {
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Profile(uid: 'uid'))),
+                              builder: (context) => Profile(uid:user.uid))),
                       child: ListTile(
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(user.photoUrl),

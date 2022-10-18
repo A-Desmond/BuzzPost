@@ -5,10 +5,12 @@ import 'package:get/get.dart';
 class ProfileController extends GetxController {
   final Rx<Map<String, dynamic>> _user = Rx<Map<String, dynamic>>({});
   Map<String, dynamic> get user => _user.value;
-  Rx<String> _uid = "".obs;
+  final Rx<String> _uid = "".obs;
 
   updateUserId(String uid) {
     _uid.value = uid;
+    getData();
+    followUser();
   }
 
   getData() async {
@@ -60,18 +62,60 @@ class ProfileController extends GetxController {
         isFollowing = true;
       } else {
         isFollowing = false;
-        
       }
     });
     _user.value = {
-      'followers':followers.toString(),
+      'followers': followers.toString(),
       'following': following.toString(),
       'isFollowing': isFollowing,
-      'likes':likes.toString(),
-      'photoUrl':profilePhoto,
-      'name':name,
+      'likes': likes.toString(),
+      'photoUrl': profilePhoto,
+      'name': name,
       'thumbnail': thumbnail,
     };
     update();
   }
+
+  followUser() async {
+    var doc = await firestore
+        .collection('users')
+        .doc(_uid.value)
+        .collection('followers')
+        .doc(authController.user.uid)
+        .get();
+
+        if(!doc.exists){
+          await firestore
+        .collection('users')
+        .doc(_uid.value)
+        .collection('followers')
+        .doc(authController.user.uid)
+        .set({});
+         await firestore
+        .collection('users')
+        .doc(authController.user.uid)
+        .collection('following')
+        .doc(_uid.value)
+        .set({});
+        _user.value.update('followers', (value) => (int.parse(value)+1).toString());
+        }else{
+            await firestore
+        .collection('users')
+        .doc(_uid.value)
+        .collection('followers')
+        .doc(authController.user.uid)
+        .delete();
+         await firestore
+        .collection('users')
+        .doc(authController.user.uid)
+        .collection('followering')
+        .doc(_uid.value)
+        .delete();
+        _user.value.update('followers', (value) => (int.parse(value)-1).toString());
+        }
+    _user.value.update('isFollowing', (value) => !value);
+    update();
+  }
+
+
 }

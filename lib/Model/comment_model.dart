@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class CommentModel {
   final String username;
   final String comment;
+  // ignore: prefer_typing_uninitialized_variables
   final datePublished;
   final List likes;
   final String profilePhoto;
@@ -32,13 +33,13 @@ class CommentModel {
   static CommentModel fromJson(DocumentSnapshot snap) {
     var snapshot = snap.data() as Map<String, dynamic>;
     return CommentModel(
-      username: snap['name'],
-      comment: snap['comment'],
-      datePublished: snap['datePublished'],
-      likes: snap['likes'],
-      profilePhoto: snap['photoUrl'],
-      uid: snap['uid'],
-      id: snap['id'],
+      username: snapshot['name'],
+      comment: snapshot['comment'],
+      datePublished: snapshot['datePublished'],
+      likes: snapshot['likes'],
+      profilePhoto: snapshot['photoUrl'],
+      uid: snapshot['uid'],
+      id: snapshot['id'],
     );
   }
 }

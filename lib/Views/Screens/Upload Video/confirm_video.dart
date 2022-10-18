@@ -10,7 +10,7 @@ import 'package:video_player/video_player.dart';
 class ConfrimVideo extends StatefulWidget {
   final File file;
   final String path;
-  ConfrimVideo({
+const   ConfrimVideo({
     super.key,
     required this.file,
     required this.path,

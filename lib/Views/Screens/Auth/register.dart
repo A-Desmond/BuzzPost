@@ -9,8 +9,6 @@ class Register extends StatelessWidget {
       TextEditingController();
   final TextEditingController _registerpasswordController =
       TextEditingController();
-  final TextEditingController _businessName = TextEditingController();
-  final TextEditingController _businessType = TextEditingController();
   final TextEditingController _ownersName = TextEditingController();
   final String imageurl = 'https://bit.ly/3Djxl3r';
   @override

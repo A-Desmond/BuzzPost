@@ -1,12 +1,10 @@
 import 'dart:io';
 
 import 'package:buzpost/Model/user_model.dart';
-import 'package:buzpost/Views/Screens/Auth/login.dart';
 import 'package:buzpost/Views/Screens/Auth/register.dart';
 import 'package:buzpost/constant.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -82,7 +80,7 @@ class AuthController extends GetxController {
           email: email,
           photoUrl: downloadUrl,
           uid: credential.user!.uid,);
-        if (credential.user!.uid != null) {
+        if (credential.user!.uid != '') {
           await firestore
               .collection('users')
               .doc(credential.user!.uid)

@@ -34,7 +34,7 @@ _controller.setVolume(1);
     return Container(
       width: size.width,
       height: size.height,
-      decoration: BoxDecoration(color: Colors.black),
+      decoration:const  BoxDecoration(color: Colors.black),
       child: VideoPlayer(_controller),
     );
   }

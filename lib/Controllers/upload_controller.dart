@@ -45,6 +45,7 @@ class UploadVideoController extends GetxController {
       if (productName.isNotEmpty &&
           productDescription.isNotEmpty &&
           videoPath.isNotEmpty) {
+         const   Center(child: CircularProgressIndicator(),); 
         String uid = firebaseAuth.currentUser!.uid;
         DocumentSnapshot userDoc =
             await firestore.collection('users').doc(uid).get();

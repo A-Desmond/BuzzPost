@@ -40,4 +40,9 @@ most starred/popular state management on pub.dev
 which is 
 ## GETX
 
+If you have any issue, suggestions, anything concerning  Flutter, or this repo.
+Kindly reach me out
+desmondnelson908@gmail.com 
+Twitter(27_wednesday)
+
 

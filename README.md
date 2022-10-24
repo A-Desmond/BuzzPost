@@ -46,3 +46,10 @@ desmondnelson908@gmail.com
 Twitter(27_wednesday)
 
 
+
+![photo_2022-10-24_13-02-19](https://user-images.githubusercontent.com/63297674/197533480-c4cc83df-aad0-4d4d-a86f-f6b1247510b7.jpg)
+![photo_2022-10-24_13-03-17](https://user-images.githubusercontent.com/63297674/197533487-ba20fd10-9eac-4923-a0c9-773bef152029.jpg)
+![photo_2022-10-24_13-03-24](https://user-images.githubusercontent.com/63297674/197533495-e445082f-e513-4bd5-bdc7-7682ed740272.jpg)
+![photo_2022-10-24_13-03-59](https://user-images.githubusercontent.com/63297674/197533499-3829786f-a689-4e52-ba1f-2186f5be1bc0.jpg)
+
+
